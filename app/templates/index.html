@@ -4,13 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio | {{ desarrollador }}</title>
-    <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; margin: 0; padding: 20px; background-color: #f4f4f9; color: #333; }
-        .container { max-width: 800px; margin: auto; }
-        header { border-bottom: 2px solid #333; margin-bottom: 20px; padding-bottom: 10px; }
-        .proyecto { background: #fff; padding: 15px; margin-bottom: 15px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .tag { background: #e2e8f0; padding: 3px 8px; border-radius: 3px; font-size: 0.85em; margin-right: 5px; }
-    </style>
+    <!-- Vinculamos el archivo CSS estático -->
+    <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
 </head>
 <body>
     <div class="container">
