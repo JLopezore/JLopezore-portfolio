@@ -13,8 +13,16 @@ app.mount("/static", StaticFiles(directory="app/static"), name="static")
 
 @app.get("/", response_class=HTMLResponse)
 async def home(request: Request):
-    # Datos dinámicos que enviaremos al frontend
-    # En el futuro, esto vendrá de una consulta a base de datos
+
+    biografia = (
+        "Soy estudiante de octavo semestre de la Licenciatura en Informática, enfocado en el "
+        "desarrollo backend y la administración de infraestructura. Me apasiona construir soluciones "
+        "eficientes, desde el código hasta el despliegue en servidores Linux. Además de crear APIs "
+        "con Python y FastAPI, tengo experiencia práctica gestionando redes y equipos de "
+        "telecomunicaciones para proveedores de internet (WISP), lo que me da una visión integral "
+        "del ciclo de vida del software y la conectividad."
+    )
+
     mis_proyectos = [
         {
             "nombre": "WISP La Soledad - Core",
@@ -33,8 +41,10 @@ async def home(request: Request):
         request=request,
         name="index.html",
         context={
-            "desarrollador": "Jorge López",
+            "desarrollador": "Jorge López López",
             "rol": "Backend & Infrastructure Developer",
+            "bio": biografia,
             "proyectos": mis_proyectos
         }
     )
+
