@@ -6,6 +6,7 @@
     <title>Portafolio | {{ desarrollador }}</title>
     <!-- Vinculamos el archivo CSS estático -->
     <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
 <body>
     <div class="container">
@@ -16,6 +17,25 @@
         <section>
             <h2>Sobre mí</h2>
             <p>{{ bio }}</p>
+        </section>
+
+        <section class="habilidades">
+            <h2>Stack Tecnológico</h2>
+            <div class="habilidades-grid">
+                {% for habilidad in habilidades %}
+                <div class="habilidad-item" title="{{ habilidad.nombre }}">
+                    
+                    <!-- Lógica para decidir si es icono web o imagen local -->
+                    {% if habilidad.es_imagen %}
+                        <img src="{{ url_for('static', path=habilidad.icono) }}" alt="{{ habilidad.nombre }}" class="custom-icon">
+                    {% else %}
+                        <i class="{{ habilidad.icono }}"></i>
+                    {% endif %}
+                    
+                    <span>{{ habilidad.nombre }}</span>
+                </div>
+                {% endfor %}
+            </div>
         </section>
 
         <section>

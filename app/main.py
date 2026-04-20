@@ -23,6 +23,24 @@ async def home(request: Request):
         "del ciclo de vida del software y la conectividad."
     )
 
+    mis_habilidades = [
+        {"nombre": "Python", "icono": "devicon-python-plain", "es_imagen": False},
+        {"nombre": "FastAPI", "icono": "devicon-fastapi-plain", "es_imagen": False},
+        {"nombre": "Java", "icono": "devicon-java-plain", "es_imagen": False},
+        {"nombre": "Android", "icono": "devicon-android-plain", "es_imagen": False},
+        {"nombre": "C", "icono": "devicon-c-plain", "es_imagen": False},
+        {"nombre": "Linux", "icono": "devicon-linux-plain", "es_imagen": False},
+        {"nombre": "Admin. Servidores", "icono": "devicon-bash-plain", "es_imagen": False}, # Agregado
+        {"nombre": "Docker", "icono": "devicon-docker-plain", "es_imagen": False},
+        {"nombre": "PostgreSQL", "icono": "devicon-postgresql-plain", "es_imagen": False},
+        {"nombre": "Oracle", "icono": "devicon-oracle-original", "es_imagen": False},
+        {"nombre": "Couchbase", "icono": "devicon-couchbase-plain", "es_imagen": False},
+        {"nombre": "Git", "icono": "devicon-git-plain", "es_imagen": False},
+        # Estos dos buscarán una imagen en la carpeta static
+        {"nombre": "MikroTik", "icono": "mikrotik.png", "es_imagen": True}, 
+        {"nombre": "Ubiquiti", "icono": "ubiquiti.png", "es_imagen": True}
+    ]
+
     mis_proyectos = [
         {
             "nombre": "WISP La Soledad - Core",
@@ -44,6 +62,7 @@ async def home(request: Request):
             "desarrollador": "Jorge López López",
             "rol": "Backend & Infrastructure Developer",
             "bio": biografia,
+            "habilidades": mis_habilidades,
             "proyectos": mis_proyectos
         }
     )
