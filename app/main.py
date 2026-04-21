@@ -43,14 +43,34 @@ async def home(request: Request):
 
     mis_proyectos = [
         {
-            "nombre": "WISP La Soledad - Core",
-            "descripcion": "Backend de gestión automatizada con generación de recibos en PDF y notificaciones por WhatsApp.",
-            "stack": ["Python", "FastAPI", "MikroTik"]
+            "nombre": "Diseño UI/UX para una app de biblioteca",
+            "descripcion": "Diseño de interfaz y experiencia de usuario para una aplicación móvil de gestión de biblioteca, enfocada en la facilidad de uso y accesibilidad.",
+            "stack": ["Figma", "IHC"],
+            "enlace": "https://www.figma.com/proto/LLDZiS1k3xLy1t4P80nipY/Main?node-id=0-1&t=nSOfas3ooz7mYR6Q-1"
         },
         {
-            "nombre": "Clúster Distribuido",
-            "descripcion": "Arquitectura de base de datos de 4 nodos configurada para pruebas de alta disponibilidad y fragmentación de rangos.",
-            "stack": ["CockroachDB", "Linux", "Docker"]
+            "nombre": "WISP La Soledad - Core",
+            "descripcion": "Backend de gestión automatizada con generación de recibos en PDF y notificaciones por WhatsApp.",
+            "stack": ["Python", "FastAPI", "MikroTik"],
+            "enlace": "https://github.com/JLopezore/WISP-Manager.git"
+        },
+        {
+            "nombre": "WISP La Soledad - Portal del Cliente",
+            "descripcion": "Portal web para clientes con autenticación, visualización de facturas y soporte técnico.",
+            "stack": ["Python", "FastAPI", "React"],
+            "enlace": "https://github.com/JLopezore/WISP-Manager.git"
+        },
+        {
+            "nombre": "Wisp La Soledad - Portal Android",
+            "descripcion": "Aplicación móvil para clientes con funcionalidades similares al portal web, optimizada para Android.",
+            "stack": ["Kotlin", "Android", "Firebase"],
+            "enlace": "https://github.com/JLopezore/WispHub-Mobile.git"    
+        },
+        {
+            "nombre": "Siplex - backend",
+            "descripcion": "Backend para aplicación de gestión de planificación de examenes, con autenticación y API REST.",
+            "stack": ["Python", "FastAPI", "PostgreSQL"],
+            "enlace": "https://github.com/LosRatones-404T/HORARIOS-BACKEND.git"
         }
     ]
     

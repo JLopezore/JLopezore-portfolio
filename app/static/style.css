@@ -198,3 +198,38 @@ footer {
     display: block; /* Evita espacios fantasma debajo de la imagen */
     margin: 0;
 }
+
+/* Alinear las etiquetas y el botón del proyecto */
+.stack-y-enlace {
+    display: flex;
+    justify-content: space-between; /* Separa las etiquetas a la izquierda y el botón a la derecha */
+    align-items: center;
+    margin-top: 15px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+/* Estilo para el botón de enlace del proyecto */
+.btn-proyecto {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9em;
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-proyecto:hover {
+    border-color: var(--accent-color);
+    background-color: rgba(88, 166, 255, 0.1); /* Un fondo azul muy tenue */
+    transform: translateX(3px); /* Se mueve un poquito hacia la derecha */
+}

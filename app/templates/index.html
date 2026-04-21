@@ -44,13 +44,21 @@
             <div class="proyecto">
                 <h3>{{ proyecto.nombre }}</h3>
                 <p>{{ proyecto.descripcion }}</p>
-                <div>
-                    {% for tecnologia in proyecto.stack %}
-                        <span class="tag">{{ tecnologia }}</span>
-                    {% endfor %}
+                <div class="stack-y-enlace"> <!-- Envolvemos todo para alinearlo mejor -->
+                    <div class="tags">
+                        {% for tecnologia in proyecto.stack %}
+                            <span class="tag">{{ tecnologia }}</span>
+                        {% endfor %}
+                    </div>
+                    
+                    <!-- NUEVO: Botón del enlace al proyecto -->
+                    <a href="{{ proyecto.enlace }}" target="_blank" class="btn-proyecto">
+                        Ver Proyecto <span>&#8594;</span> <!-- Flechita hacia la derecha -->
+                    </a>
                 </div>
             </div>
             {% endfor %}
+        </section>
         </section>
         <footer>
             <h2>Contacto</h2>
