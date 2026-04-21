@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
 <body>
+    <div class="language-switcher">
+        <a href="/?lang=es" class="{% if lang == 'es' %}active{% endif %}">ES</a>
+        <a href="/?lang=en" class="{% if lang == 'en' %}active{% endif %}">EN</a>
+    </div>
     <div class="container">
         <header class="perfil-header">
             <!-- Contenedor de la foto -->
@@ -20,16 +24,16 @@
             <!-- Contenedor del texto -->
             <div class="info-texto">
                 <h1>{{ desarrollador }}</h1>
-                <p><strong>{{ rol }}</strong></p>
+                <p><strong>{{ t.rol }}</strong></p>
             </div>
         </header>
         <section>
-            <h2>Sobre mí</h2>
-            <p>{{ bio }}</p>
+            <h2>{{ t.sobre_mi_titulo }}</h2>
+            <p>{{ t.sobre_mi_texto }}</p>
         </section>
 
         <section class="habilidades">
-            <h2>Stack Tecnológico</h2>
+            <h2>{{ t.habilidades_titulo }}</h2>
             <div class="habilidades-grid">
                 {% for habilidad in habilidades %}
                 <div class="habilidad-item" title="{{ habilidad.nombre }}">
@@ -48,11 +52,11 @@
         </section>
 
         <section>
-            <h2>Proyectos Destacados</h2>
+            <h2>{{ t.proyectos_titulo }}</h2>
             {% for proyecto in proyectos %}
             <div class="proyecto">
                 <h3>{{ proyecto.nombre }}</h3>
-                <p>{{ proyecto.descripcion }}</p>
+                <p>{{ proyecto.descripcion[lang] }}</p>
                 <div class="stack-y-enlace"> <!-- Envolvemos todo para alinearlo mejor -->
                     <div class="tags">
                         {% for tecnologia in proyecto.stack %}
@@ -62,7 +66,7 @@
                     
                     <!-- NUEVO: Botón del enlace al proyecto -->
                     <a href="{{ proyecto.enlace }}" target="_blank" class="btn-proyecto">
-                        Ver Proyecto <span>&#8594;</span> <!-- Flechita hacia la derecha -->
+                        {{ t.ver_proyecto }} <span>&#8594;</span> <!-- Flechita hacia la derecha -->
                     </a>
                 </div>
             </div>
@@ -70,8 +74,8 @@
         </section>
         </section>
         <footer>
-            <h2>Contacto</h2>
-            <p>¿Tienes algún proyecto en mente o buscas un perfil de infraestructura y backend?</p>
+            <h2>{{ t.contacto_titulo }}</h2>
+            <p>{{ t.contacto_texto }}</p>
             
             <div class="enlaces-contacto">
                 <!-- Reemplaza el # con la URL de tu perfil real de GitHub -->
@@ -88,7 +92,7 @@
                 </a>
             </div>
             
-            <p class="copyright">© 2026 {{ desarrollador }}. Construido con FastAPI y Docker.</p>
+            <p class="copyright">© 2026 {{ desarrollador }}. {{ t.derechos }}</p>
         </footer>
     </div>
 </body>

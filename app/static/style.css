@@ -276,3 +276,45 @@ footer {
         gap: 15px;
     }
 }
+
+/* Selector de Idiomas */
+/* Selector de Idiomas - Estilo Moderno (Segmented Control) */
+.language-switcher {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: inline-flex;
+    background: var(--card-bg); /* Fondo oscuro de la tarjeta */
+    border: 1px solid var(--border-color);
+    border-radius: 30px; /* Bordes totalmente redondeados (forma de píldora) */
+    padding: 4px; /* Pequeño margen interno para el botón activo */
+    font-family: 'Fira Code', 'Consolas', monospace;
+    font-size: 0.9em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+}
+
+/* Estilo base para cada opción de idioma */
+.language-switcher a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 6px 18px; /* Espacio horizontal para hacer el botón más ancho */
+    border-radius: 26px; /* Misma curva que el contenedor exterior */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Animación más suave y fluida */
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Efecto al pasar el cursor (solo si no está activo) */
+.language-switcher a:hover:not(.active) {
+    color: var(--accent-color);
+    background: rgba(88, 166, 255, 0.1); /* Brillo azul sutil de fondo */
+}
+
+/* Estilo para el idioma que está seleccionado actualmente */
+.language-switcher a.active {
+    background: var(--accent-color); /* Se rellena completamente de azul */
+    color: #0d1117; /* El texto se vuelve oscuro para hacer un contraste perfecto */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
