@@ -10,9 +10,17 @@
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>{{ desarrollador }}</h1>
-            <p><strong>{{ rol }}</strong></p>
+        <header class="perfil-header">
+            <!-- Contenedor de la foto -->
+            <div class="foto-container">
+                <img src="{{ url_for('static', path='foto.jpg') }}" alt="Foto de {{ desarrollador }}" class="foto-perfil">
+            </div>
+            
+            <!-- Contenedor del texto -->
+            <div class="info-texto">
+                <h1>{{ desarrollador }}</h1>
+                <p><strong>{{ rol }}</strong></p>
+            </div>
         </header>
         <section>
             <h2>Sobre mí</h2>

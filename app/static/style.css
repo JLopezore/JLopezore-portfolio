@@ -233,3 +233,46 @@ footer {
     background-color: rgba(88, 166, 255, 0.1); /* Un fondo azul muy tenue */
     transform: translateX(3px); /* Se mueve un poquito hacia la derecha */
 }
+
+/* Nuevo diseño del Header con Flexbox */
+.perfil-header {
+    display: flex;
+    align-items: center; /* Alinea verticalmente la foto y el texto en el centro */
+    gap: 30px; /* Separación entre la foto y el texto */
+    border-bottom: 2px solid var(--border-color);
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+}
+
+/* Estilo para que la foto sea redonda y profesional */
+.foto-perfil {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%; /* Esto hace el círculo perfecto */
+    object-fit: cover; /* Evita que tu foto se deforme o estire */
+    border: 3px solid var(--accent-color); /* Borde con tu color de acento */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Ajustes para el texto al lado de la foto */
+.info-texto h1 {
+    color: var(--accent-color);
+    margin: 0 0 5px 0; /* Quitamos márgenes extra */
+    font-size: 2.5em;
+    line-height: 1.1;
+}
+
+.info-texto p {
+    margin: 0;
+    font-size: 1.2em;
+    color: #8b949e;
+}
+
+/* Diseño Responsivo: Si la pantalla es pequeña (teléfonos), los apilamos */
+@media (max-width: 600px) {
+    .perfil-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+}
