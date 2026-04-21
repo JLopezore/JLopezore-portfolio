@@ -52,6 +52,27 @@
             </div>
             {% endfor %}
         </section>
+        <footer>
+            <h2>Contacto</h2>
+            <p>¿Tienes algún proyecto en mente o buscas un perfil de infraestructura y backend?</p>
+            
+            <div class="enlaces-contacto">
+                <!-- Reemplaza el # con la URL de tu perfil real de GitHub -->
+                <a href="https://github.com/JLopezore" target="_blank" class="btn-contacto">
+                    <i class="devicon-github-original"></i> GitHub
+                </a>
+                
+                <!-- Reemplaza el # con tu correo -->
+                <a href="mailto:j.lopezlopez1004@gmail.com" class="btn-contacto">
+                    <i class="devicon-google-plain"></i> Correo
+                </a>
+                <a href="https://instagram.com/jlopezore" target="_blank" class="btn-contacto">
+                    <img src="{{ url_for('static', path='instagram.png') }}" alt="Instagram" class="icono-redes"> Instagram
+                </a>
+            </div>
+            
+            <p class="copyright">© 2026 {{ desarrollador }}. Construido con FastAPI y Docker.</p>
+        </footer>
     </div>
 </body>
 </html>
